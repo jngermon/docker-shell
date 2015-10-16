@@ -15,6 +15,12 @@
 
         <service id="command.shell"
             class="DockerTools\Command\DockerShellCommand"
+        >
+            <argument type="service" id="docker" />
+        </service>
+
+        <service id="docker"
+            class="DockerTools\Docker\Docker"
         />
     </services>
 </container>
